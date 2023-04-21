@@ -1,0 +1,99 @@
+.slider{
+    position: relative; 
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+.arrow{
+  font-size: x-large;
+  border: 1px solid orangered;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 53%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition:  background-color 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 500px) {
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.slide img{
+   height: 100%;
+}
+.slide{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+.content {
+  position: absolute;
+  text-align: center;
+  top: 2rem;
+  left: 50%;
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(-50%);
+  color:#fff;
+  animation: slide-up .75s ease 0.5s;
+  animation-fill-mode:forwards;
+  h1 {
+    font-size: 3rem;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+}
+
+
+@keyframes slide-up {
+  0% {
+    top: 15rem;
+  }
+  100% {
+    top: 10rem;
+  }
+}
+
+.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.current .content {
+  opacity: 1;
+}
+
+.arrow:hover{
+  background-color: #fff;
+}
+.next{
+  right:1.5rem;
+  color: orangered;
+}
+.left{
+  left:1.5rem;
+  color: orangered;
+}
+
+
