@@ -7,10 +7,10 @@ import './Slider.scss'
 function Slider() {
   const [currentSlider, setCurrentSlider] = useState(0);
   const sliderLength = SliderDate.length;
-  // const autoSlide = true;
-  // let IntervalTime = 6000;
-  // let slideInterval;
-  
+  const autoSlide = true;
+  let IntervalTime = 8000;
+  let slideInterval;
+
   const nextSlide = ()=>{
      setCurrentSlider(currentSlider === sliderLength - 1 ? 0 : currentSlider + 1);
      console.log(currentSlider);
@@ -22,6 +22,16 @@ function Slider() {
   useEffect(()=>{
     setCurrentSlider(0);
   },[])
+  useEffect(()=>{
+      if(autoSlide){
+          const auto = ()=>{
+               slideInterval = setInterval(nextSlide,IntervalTime);
+          }
+          auto();
+      }
+      return ()=> clearInterval(slideInterval)
+  },[currentSlider,autoSlide,slideInterval])
+
   return (
     <div className='slider'>
        <i className="bi bi-chevron-right arrow next" onClick={nextSlide}></i>
