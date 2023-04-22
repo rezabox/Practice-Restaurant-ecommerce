@@ -1,4 +1,5 @@
 import Header from "./Components/Navbar/Header";
+import Section from "./Components/Section1/Section";
 import Slider from "./Components/slider/Slider";
 
 function App() {
@@ -6,6 +7,15 @@ function App() {
     <div className="App">
        <Header/>
        <Slider/>
+       <br/>
+       <br/>
+       <br/>
+
+       <Section/> 
+       <br/>
+       <br/>
+       <br/>   
+       <br/>
     </div>
   );
 }
