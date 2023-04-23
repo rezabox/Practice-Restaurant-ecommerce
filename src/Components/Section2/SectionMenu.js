@@ -30,12 +30,10 @@ function SectionMenu() {
               <div className="spin-effect">
                 <img src={Image1} className="image-responsive" alt="pizza1" />
                 <div className="text-box">
-                  <div className="text-box">
                     <div className="info-gal">
                       <h4>انواع پیتزا</h4>
                       <span className="separator"></span>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -44,13 +42,11 @@ function SectionMenu() {
             <div className="box_gallery aos-init aos-animate" data-aos="fade-left" data-aos-duration="2000">
               <div className="spin-effect">
                 <img src={Image2} className="image-responsive" alt="berger" />
-                <div className="text-box">
                   <div className="text-box">
                     <div className="info-gal">
                       <h4>انواع همبرگر</h4>
                       <span className="separator"></span>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -63,13 +59,11 @@ function SectionMenu() {
                   className="image-responsive"
                   alt="Sandwitch"
                 />
-                <div className="text-box">
                   <div className="text-box">
                     <div className="info-gal">
                       <h4>انواع پیتزا</h4>
                       <span className="separator"></span>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -79,12 +73,10 @@ function SectionMenu() {
               <div className="spin-effect">
                 <img src={Image4} className="image-responsive" alt="chicken" />
                 <div className="text-box">
-                  <div className="text-box">
                     <div className="info-gal">
                       <h4>انواع کنتاکی</h4>
                       <span className="separator"></span>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -94,13 +86,11 @@ function SectionMenu() {
               <div className="spin-effect">
                 <img src={Image5} className="image-responsive" alt="pizza" />
                 <div className="text-box">
-                  <div className="text-box">
                     <div className="info-gal">
                       <h4>انواع پیتزا</h4>
                       <span className="separator"></span>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
@@ -109,12 +99,10 @@ function SectionMenu() {
               <div className="spin-effect">
                 <img src={Image6} className="image-responsive" alt="pizza" />
                 <div className="text-box">
-                  <div className="text-box">
                     <div className="info-gal">
                       <h4>انواع پیتزا</h4>
                       <span className="separator"></span>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
