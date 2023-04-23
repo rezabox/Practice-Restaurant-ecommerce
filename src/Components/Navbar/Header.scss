@@ -1,0 +1,20 @@
+.navbar{
+  padding: 20px;
+  background-color: #fff;
+  transition: all .3s ease-in-out;
+}
+.navbar.active{
+  padding: 10px;
+  background-color:rgba(0, 0, 0, 1);
+  width: 100%;
+  position:fixed;
+  z-index: 999;
+}
+.link.active{
+   color: #fff;
+}
+@media screen and (max-width:600px) {
+   .navbar.active{
+      display: none;
+   }
+}
