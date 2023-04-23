@@ -8,8 +8,8 @@ function Header() {
   return (
     <nav>
        <div className='container'>
-          <div className='row'>
-             <div className='col-md-12'>
+          <div className='row p-7'>
+             <div className='navbar'>
                   <div className='navbar-header'></div>
                   <div className={styles.navbar}>
                     <div className='right_nav'>
