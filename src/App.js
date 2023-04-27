@@ -16,13 +16,10 @@ function App() {
        <br/>
        <br/>
        <SectionMenu/>
-       <br/>   
        <br/>
        <SectionNews/>
        <br/>
        <br/>
-       <br/>
-
     </div>
   );
 }

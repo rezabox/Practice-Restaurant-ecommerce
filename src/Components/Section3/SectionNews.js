@@ -8,15 +8,15 @@ function SectionNews() {
   return (
     <section id="news">
       <div className="bgContainer">
-        <div className="divbg"></div>
+        <div className="divback"></div>
         <div className="events">
-          <div className="title_page2">
-            <h3 className="aos-init aos-animate mt-20 bg-red-500">رویداد های اخیر</h3>
+          <div className="title_page2 text-center">
+            <h3 className="aos-init aos-animate mt-20" data-aos="fade-down" data-aos-duration="1000">رویداد های اخیر</h3>
             <div className="line">
               <span></span>
             </div>
           </div>
-          {/* <div className="row2">
+          <div className="row2">
             <div className="col-md-4 col-sm-6 col-xs-12">
               <article className="box_blog">
                 <div className="img">
@@ -53,7 +53,7 @@ function SectionNews() {
                 </div>
               </article>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>
