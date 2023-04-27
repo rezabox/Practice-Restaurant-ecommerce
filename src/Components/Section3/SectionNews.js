@@ -47,7 +47,7 @@ function SectionNews() {
                   <a>
                     <img src={image1} alt="از همیشه به شما نزدیکتریم" />
                     <div className="on">
-                      <h3>آغاز به كار سفارش اينترنتي</h3>
+                      <h3>آغاز به كار سفارش اينترنتی</h3>
                     </div>
                   </a>
                 </div>
