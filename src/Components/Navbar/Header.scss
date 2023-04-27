@@ -1,6 +1,17 @@
 html{
    scroll-behavior: smooth;
 }
+.right_nav{
+   width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.toggle_menu{
+   opacity: 0;
+   margin-right: 20px;
+   font-size: 20px;
+}
 .navbar{
   padding: 20px;
   background-color: #fff;
@@ -16,11 +27,7 @@ html{
 .link.active{
    color: #fff;
 }
-@media screen and (max-width:600px) {
-   .navbar.active{
-      display: none;
-   }
-}
+
 .arrow2{
    position: absolute;
    left: 50px;
@@ -40,7 +47,38 @@ html{
       font-weight: bold;
    }
 }
+.navbar_nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   transition:all .5s ease-in-out;
+   width: 150%;
+}
 .arrow2.active{
    position: fixed;
    opacity: 1;
+}
+@media screen and (max-width:600px){
+   .toggle_menu{
+      opacity: 1;
+   }
+   .toggle_menu.active{
+       color: #fff;
+   }
+   .navbar_nav{
+      position: absolute;
+      opacity: 0;
+      display: block;
+      padding: 5px;
+      width: 95%;
+      color: #fff;
+      background-color: black;
+      z-index: 1;
+      margin-top: 40%;
+      border-radius: 10px;
+   }
+   .navbar_nav.active{
+      opacity: 1;
+      margin-top: 44%;
+   }
 }

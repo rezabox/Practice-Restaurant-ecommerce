@@ -1,8 +1,9 @@
 .navbar{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:10px 20px;
+  padding:5px 10px;
   li{
     list-style: none;
     transition: .5s color ease-in-out;
@@ -11,14 +12,9 @@
     }
     
   }
-  .navbar_nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 150%;
-  }
 }
 .active{
     position: relative;
     color: orange;
 }
+
