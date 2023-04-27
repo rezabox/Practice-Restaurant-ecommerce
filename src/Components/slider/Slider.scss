@@ -22,13 +22,7 @@
   align-items: center;
   justify-content: center;
 }
-@media screen and (min-width: 500px) {
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
+
 .slide img{
    height: 100%;
 }
@@ -96,4 +90,26 @@
   color: orangered;
 }
 
+@media screen and (min-width: 500px) {
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
+@media screen and (max-width:600px){
+  .slide img{
+    height: 100%;
+    object-fit: cover;
+  }
+  .content{
+    h1{
+       font-weight: 900;
+       font-size: 25px;
+    }
+    p{
+      display: none;
+    }
+  }
+}

@@ -7,13 +7,16 @@ const activeLink = ({ isActive }) => (isActive ? `${styles.active}` : "");
 function Header() { 
   const [navbar,setNavbar] = useState(false);
   const [link,setLink] = useState(false);
+  const [arrowTop,setArrowTop] = useState(false);
   const changeColorNavbar = ()=>{
    if(window.scrollY >= 80){
         setNavbar(true);
         setLink(true)
+        setArrowTop(true);
    }else{
         setNavbar(false);
         setLink(false);
+        setArrowTop(false);
    }
   }  
   window.addEventListener('scroll', changeColorNavbar);
@@ -38,7 +41,14 @@ function Header() {
                     </div>
                </div>
              </div>
-          </div>       
+          </div>  
+          <div className={arrowTop ? 'arrow2 active' : 'arrow2'}>
+              <p id="back-up" className='arrow_top'>
+                 <a href='#'>
+                 <i class="bi bi-chevron-up"></i>
+                 </a>
+              </p>
+          </div>     
     </nav>
   )
 }

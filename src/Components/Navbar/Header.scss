@@ -1,3 +1,6 @@
+html{
+   scroll-behavior: smooth;
+}
 .navbar{
   padding: 20px;
   background-color: #fff;
@@ -17,4 +20,27 @@
    .navbar.active{
       display: none;
    }
+}
+.arrow2{
+   position: absolute;
+   left: 50px;
+   top: 80%;
+   z-index: 1;
+   opacity: 0;
+   width: 40px;
+   height: 40px;
+   background-color: #FF9800;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 12px;
+   transition:all 0.5s ease-in-out;
+   i{
+      font-size: large;
+      font-weight: bold;
+   }
+}
+.arrow2.active{
+   position: fixed;
+   opacity: 1;
 }
