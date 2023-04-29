@@ -9,17 +9,9 @@ function App() {
     <div className="App">
        <Header/>
        <Slider/>
-       <br/>
-       <br/>
-       <br/>
        <Section/> 
-       <br/>
-       <br/>
        <SectionMenu/>
-       <br/>
        <SectionNews/>
-       <br/>
-       <br/>
     </div>
   );
 }

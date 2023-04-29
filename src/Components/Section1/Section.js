@@ -16,7 +16,7 @@ function Section() {
          </div>
          <br/>
          <br/>         
-         <div className='order'>
+         <div className='order mt-8 mb-7'>
             <div className='row'>
               <div className='online_order'>
                 <img src={Image1} alt="png image" data-aos="fade-left" />
