@@ -1,3 +1,4 @@
+import FooterPage from "./Components/Footer/FooterPage";
 import Header from "./Components/Navbar/Header";
 import Section from "./Components/Section1/Section";
 import SectionMenu from "./Components/Section2/SectionMenu";
@@ -12,7 +13,9 @@ function App() {
        <Section/> 
        <SectionMenu/>
        <SectionNews/>
-    </div>
+       <FooterPage/>
+       
+     </div>
   );
 }
 

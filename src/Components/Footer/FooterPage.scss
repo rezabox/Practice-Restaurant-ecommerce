@@ -1,0 +1,26 @@
+.location{
+  width: 150%;
+  padding: 70px;
+  border-radius: 13px;
+}
+.bg_footer{
+  position: relative;
+  background-image: url('../../image/bg_price.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before{
+    content: "";
+    background-image: url('../../image/line.png');
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 96px;
+    top: -45px;
+    z-index: 1;
+  }
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
