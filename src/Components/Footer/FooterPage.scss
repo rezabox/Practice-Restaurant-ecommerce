@@ -19,8 +19,42 @@
     z-index: 1;
   }
 }
-.container{
+.row3{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.footer_address{
+  padding: 30px;
+  .link_footer{
+    margin-left: 100px;
+    display: flex;
+    color: #fff;
+    .leafBL{
+       width: 100px;
+    }
+    .bi-geo-alt{
+      color:#1081e0;
+    }
+    .bi-telephone-fill{
+      color:#fb6363;
+    }
+    .bi-calendar-week{
+      color:#ffa210;
+    }
+  }
+}
+@media screen and (max-width:600px){
+  .row3{
+    display: block;
+  }
+  .location{
+    width: 100%;
+    padding: 50px;
+  }
+  .link_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }

@@ -4,7 +4,7 @@ import Image1 from "../../image/leafBL_1.png";
 function FooterPage() {
   return (
     <footer className="bg_footer">
-      <div className="container">
+      <div className="row3">
       <div className="footer_map">
         <div className="location">
           <iframe
@@ -24,20 +24,38 @@ function FooterPage() {
       </div>
      <div className="footer_address">
         <div className="link_footer">
-           <img className="img-responsive leafBL" src={Image1}  alt="" />
+          <div className="address">
            <h3 className="title">فست فود صادقیه</h3>
            <ul className="contact">
              <li>
-              <i class="bi bi-geo-alt"></i>
+              <i className="bi bi-geo-alt"></i>
               <span>نشانی:</span>
               <span>فلکه دوم صادقیه . ابتدای ستارخان . بلوار شهدا جنوبی  پلاک 41</span>
               </li>
               <li>
-              <i class="bi bi-telephone-fill"></i>
-              <span>نشانی:</span>
-              <span>فلکه دوم صادقیه . ابتدای ستارخان . بلوار شهدا جنوبی  پلاک 41</span>
+              <i className="bi bi-telephone-fill"></i>
+              <span>تلفن:</span>
+              <span>02144277200</span>
+              </li>
+              <li>                 
+               <i className="bi bi-calendar-week"></i>
+               <span>ساعت کار: </span>
+              </li>
+              <li className="fontShik">
+                    شنبه ها : 12:00 
+                 <span>الی</span>
+                 23:30
+              </li>
+              <li className="fontShik">
+                  یکشنبه ها تا جمعه ها :11:30 
+                  <span>الی</span>
+                  23:30
               </li>
            </ul>
+          </div>
+          <div className="img">
+           < img className="img-responsive leafBL" src={Image1}  alt="" />
+          </div>
         </div>
      </div>
     </div>
