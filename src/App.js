@@ -1,21 +1,21 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import FooterPage from "./Components/Footer/FooterPage";
 import Header from "./Components/Navbar/Header";
-import Section from "./Components/Section1/Section";
-import SectionMenu from "./Components/Section2/SectionMenu";
-import SectionNews from "./Components/Section3/SectionNews";
-import Slider from "./Components/slider/Slider";
+import Home from './Page/homePage/home';
+
 
 function App() {
   return (
-    <div className="App">
-       <Header/>
-       <Slider/>
-       <Section/> 
-       <SectionMenu/>
-       <SectionNews/>
-       <FooterPage/>
-       
-     </div>
+   <>
+     <BrowserRouter>
+     <Header/>
+      <Routes>
+         <Route path="/" element={<Home/>}></Route>
+      </Routes>
+      <br/>
+      <FooterPage/>
+     </BrowserRouter>
+   </>
   );
 }
 
