@@ -45,7 +45,7 @@ function Header() {
                        <li><a href='/FoodOrder' className={link ? 'link active' : ''}>سفارش آنلاین</a></li>
                        <li><a href='/News' className={link ? 'link active' : ''}>اخبار</a></li>
                        <li><a href='/about' className={link ? 'link active' : ''}>درباره ما</a></li>
-                       <li><a href='/map' className={link ? 'link active' : ''}>ارتباط با ما</a></li>
+                       <li><a href='/connect' className={link ? 'link active' : ''}>ارتباط با ما</a></li>
                     </ul>
                     <button className={menuToggle ? 'toggle_menu active' : 'toggle_menu'} onClick={menuShow}>
                     <i class="bi bi-justify"></i>

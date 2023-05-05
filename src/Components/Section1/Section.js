@@ -4,7 +4,7 @@ import Image1 from "../../image/Ham.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 function Section() {
-  useEffect(()=>{
+  useEffect(()=> {
       AOS.init({duration: 2000});
   }, []);
   return (
