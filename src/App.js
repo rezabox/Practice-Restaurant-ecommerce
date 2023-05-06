@@ -5,7 +5,6 @@ import Home from './Page/homePage/home';
 import Login from './Page/Auth/Login';
 import Connect from './Page/connect/Connect';
 
-
 function App() {
   return (
    <>
