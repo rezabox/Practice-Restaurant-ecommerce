@@ -1,0 +1,40 @@
+form{
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    font-weight: 300;
+    padding: 0px 20px;
+    margin: 1rem auto;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.5s ease-in-out;
+  }
+  span img{
+     position: absolute;
+     transform: translate(-1150%, -225%);
+     cursor: pointer;  
+  }
+  .links{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.authLog{
+    color:#FF9800;
+    background-color: aliceblue;
+    border-radius:26px;
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register{
+   margin-top: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
