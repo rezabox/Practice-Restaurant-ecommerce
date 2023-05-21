@@ -18,7 +18,7 @@ const Login = () => {
   }
 
   return (
-    <section className="row">
+    <section className={styles.row}>
       <card className={styles.cards}>
         <div className="form">
           <form>
