@@ -18,8 +18,8 @@ const Login = () => {
   }
 
   return (
-    <section className="container">
-      <card>
+    <section className="row">
+      <card className={styles.cards}>
         <div className="form">
           <form>
             <input type="text" placeholder="ایمیل" required />

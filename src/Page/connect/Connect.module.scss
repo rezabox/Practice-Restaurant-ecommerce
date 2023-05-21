@@ -28,3 +28,11 @@ card{
     margin-top: 10px;
     border-radius: 12px;
 }
+@media screen and (max-width:600px){
+   card{
+      width:80%;
+   }
+   input{
+      position: relative;
+   }
+}

@@ -1,12 +1,9 @@
 form{
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
+  input{
     display: block;
     font-weight: 300;
     padding: 0px 20px;
     margin: 1rem auto;
-    width: 100%;
     border: none;
     border-radius: 10px;
     outline: none;
@@ -37,4 +34,12 @@ form{
    display: flex;
    align-items: center;
    justify-content: space-around;
+}
+.cards{
+  background-color:#ffc400;
+}
+@media screen and (max-width:700px){
+  .cards{
+    width: 60%;
+  }
 }
