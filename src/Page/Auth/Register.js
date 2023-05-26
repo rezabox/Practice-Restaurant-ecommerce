@@ -40,7 +40,7 @@ function Register() {
       console.log(user);
       Swal.fire({
         title:"اکانت با موفقیت ساخته شد",
-        icon: "succsess",
+        icon: "success",
         showConfirmButton: false,
         timerProgressBar: true,
         timer:3000,
@@ -51,7 +51,7 @@ function Register() {
     .catch((error)=>{
       Swal.fire({
         title:"اکانت با خطا مواجه شد.",
-        icon: " error",
+        icon:"error",
         showConfirmButton: false,
         timerProgressBar: true,
         timer:3000,

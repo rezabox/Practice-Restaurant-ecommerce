@@ -16,7 +16,7 @@ form{
   }
   span img{
      position: absolute;
-     transform: translate(-1150%, -225%);
+     transform: translate(-1100%, -215%);
      cursor: pointer;  
   }
   .links{
@@ -33,6 +33,11 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .5s ease-in-out;
+    &:hover{
+      background-color: #ff990073;
+      color: #fff;
+    }
 }
 .register{
    margin-top: 20px;

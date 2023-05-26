@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import icon1 from "../assets/eye-fill.svg";
 import icon2 from "../assets/eye-slash-fill.svg";
 import { FaGoogle } from "react-icons/fa";
+import { AiOutlineGithub } from "react-icons/ai";
 import Swal from "sweetalert2";
 import styles from "./auth.module.scss";
 import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
+  GithubAuthProvider 
 } from "firebase/auth";
 import { auth } from "../../firebase/config";
 const Login = () => {
@@ -56,7 +58,7 @@ const Login = () => {
       .catch((error) => {
         Swal.fire({
           title: "خطا در ورود رخ داد",
-          icon: "danger",
+          icon: "error",
           showConfirmButton: false,
           timerProgressBar: true,
           timer: 3000,
@@ -65,6 +67,33 @@ const Login = () => {
         });
       });
   };
+  
+  const providerTwo = new GithubAuthProvider();
+  const signInwithGithup = () =>{
+     signInWithPopup(auth, providerTwo)
+     .then((result)=>{
+      Swal.fire({
+        title: "ورود به حساب کاربری با موفقیت انجام شد",
+        icon: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 3000,
+        toast: true,
+        position: "top",
+      });
+     })
+     .catch((error)=>{
+      Swal.fire({
+        title: "خطا در ورود رخ داد",
+        icon: "error",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 3000,
+        toast: true,
+        position: "top",
+      });
+     })
+  }
 
   return (
     <section className={styles.row}>
@@ -84,6 +113,10 @@ const Login = () => {
           <button className={styles.authLog} onClick={signInWithGoogle}>
             <FaGoogle />
             <span>ورود با حساب گوگل</span>
+          </button>
+          <button className={styles.authLog} onClick={signInwithGithup}>
+             <AiOutlineGithub/>
+             <span>ورود با حساب گیت هاپ</span>
           </button>
           <span className={styles.register}>
             <p>ثبنتنام نکردم؟</p>
