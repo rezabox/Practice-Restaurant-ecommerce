@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
 import "./Header.scss";
-const activeLink = ({ isActive }) => (isActive ? `${styles.active}` : "");
+
 
 function Header() {
   const [navbar, setNavbar] = useState(false);
@@ -11,7 +11,7 @@ function Header() {
   const [menuToggle, setMenuToggle] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const changeColorNavbar = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 50) {
       setNavbar(true);
       setLink(true);
       setArrowTop(true);
@@ -43,28 +43,28 @@ function Header() {
                 id="smooth-scroll"
                 className={showMenu ? "navbar_nav active" : "navbar_nav"}
               >
-                <li>
-                  <NavLink to="/" className={link ? "link active" : ""} onClick={activeLink}>
+                <li className={link ? "link activeLink" : ""}>
+                  <NavLink to="/" >
                     صفحه اصلی
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink to="/FoodOrder" className={link ? "link active" : ""} onClick={activeLink}>
+                <li className={link ? "link active" : ""}>
+                  <NavLink to="/FoodOrder" >
                     سفارش آنلاین
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink to="/News" className={link ? "link active" : ""} onClick={activeLink}>
+                <li className={link ? "link active" : ""}>
+                  <NavLink to="/News">
                     اخبار
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink to="/about" className={link ? "link active" : ""} onClick={activeLink}>
+                <li className={link ? "link active" : ""}>
+                  <NavLink to="/about">
                     درباره ما
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink to="/connect" className={link ? "link active" : ""} onClick={activeLink}>
+                <li className={link ? "link active" : ""}>
+                  <NavLink to="/connect"  >
                     ارتباط با ما
                   </NavLink>
                 </li>
@@ -77,19 +77,21 @@ function Header() {
               </button>
             </div>
             <div className="left_nav">
-                <NavLink to="/login" className={link ? "link active" : ""} onClick={activeLink}>
+              <li  className={link ? "link active" : ""}>
+                <NavLink to="/login">
                   <span>
                     <i className="bi bi-person-fill"></i>
                   </span>
                   ورود/ثبتنام
                 </NavLink>
+              </li>
               
               
             </div>
           </div>
         </div>
       </div>
-      <div className={arrowTop ? "arrow2 active" : "arrow2"}>
+      <div className={arrowTop ? "arrow2 active1" : "arrow2"}>
         <p id="back-up" className="arrow_top">
           <a href="#">
             <i class="bi bi-chevron-up"></i>
