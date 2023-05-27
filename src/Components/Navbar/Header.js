@@ -43,37 +43,39 @@ function Header() {
                 id="smooth-scroll"
                 className={showMenu ? "navbar_nav active" : "navbar_nav"}
               >
-                <li className={link ? "link activeLink" : ""}>
+                <li className={link ? "link active" : "link active"}>
                   <NavLink to="/" >
                     صفحه اصلی
                   </NavLink>
                 </li>
-                <li className={link ? "link active" : ""}>
+                <li className={link ? "link active" : "link active"}>
                   <NavLink to="/FoodOrder" >
                     سفارش آنلاین
                   </NavLink>
                 </li>
-                <li className={link ? "link active" : ""}>
+                <li className={link ? "link active" : "link active"}>
                   <NavLink to="/News">
                     اخبار
                   </NavLink>
                 </li>
-                <li className={link ? "link active" : ""}>
+                <li className={link ? "link active" : "link active"}>
                   <NavLink to="/about">
                     درباره ما
                   </NavLink>
                 </li>
-                <li className={link ? "link active" : ""}>
+                <li className={link ? "link active" : "link active"}>
                   <NavLink to="/connect"  >
                     ارتباط با ما
                   </NavLink>
                 </li>
               </ul>
               <button
-                className={menuToggle ? "toggle_menu active" : "toggle_menu"}
+                className={menuToggle ? "toggle_menu show" : "toggle_menu"}
                 onClick={menuShow}
               >
+                <li className={link ? "link active" : ""}>
                 <i class="bi bi-justify"></i>
+                </li>
               </button>
             </div>
             <div className="left_nav">

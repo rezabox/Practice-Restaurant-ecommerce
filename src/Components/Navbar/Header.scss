@@ -14,7 +14,7 @@ html{
 }
 .navbar{
   padding: 20px;
-  background-color: #fff;
+  background-color:#5f5b54a4;
   transition: all .3s ease-in-out;
 }
 .navbar.active{
@@ -24,6 +24,7 @@ html{
   position:fixed;
   z-index: 999;
 }
+
 .link.active{
    color: #fff;
 }
@@ -64,7 +65,7 @@ html{
    .toggle_menu{
       opacity: 1;
    }
-   .toggle_menu.active{
+   .toggle_menu.show{
        color: #fff;
    }
    .navbar_nav{
