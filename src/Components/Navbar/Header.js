@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
 import "./Header.scss";
-
+import { auth } from "../../firebase/config";
+import { signOut } from "firebase/auth";
+import Swal from "sweetalert2";
 
 function Header() {
   const [navbar, setNavbar] = useState(false);
@@ -10,6 +12,9 @@ function Header() {
   const [arrowTop, setArrowTop] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+
   const changeColorNavbar = () => {
     if (window.scrollY >= 50) {
       setNavbar(true);
@@ -31,10 +36,37 @@ function Header() {
       setShowMenu(false);
     }
   };
+  const logoutUser = () => {
+    signOut(auth)
+    .then((result)=> {
+      navigate("/");
+      Swal.fire({
+        title: "خروج حساب کاربری با موفقیت انجام شد",
+        icon: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 3000,
+        toast: true,
+        position: "top",
+      });
+    })
+    .catch((error)=> {
+      Swal.fire({
+        title: "خروج حساب کاربری با خطا مواجه شد",
+        icon: "error",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 3000,
+        toast: true,
+        position: "top",
+      });
+    })
+    
 
+  }
   return (
     <nav>
-      <div className="container">
+      <div className="cat_header">
         <div className={navbar ? "navbar active" : "navbar"}>
           <div className="navbar-header"></div>
           <div className={styles.navbar}>
@@ -78,8 +110,8 @@ function Header() {
                 </li>
               </button>
             </div>
-            <div className="left_nav">
-              <li  className={link ? "link active" : ""}>
+            <div className="left_nav flex">
+              <li  className={link ? "link active" : "link active"}>
                 <NavLink to="/login">
                   <span>
                     <i className="bi bi-person-fill"></i>
@@ -87,9 +119,14 @@ function Header() {
                   ورود/ثبتنام
                 </NavLink>
               </li>
-              
-              
-            </div>
+                    <li className={link ? "link active": "link active"}>
+                      <NavLink to='/' >
+                        <span className="bg-white px-2 rounded-full mr-5" onClick={logoutUser}>
+                        خروج از حساب
+                        </span>
+                      </NavLink>
+                    </li>
+                </div>
           </div>
         </div>
       </div>

@@ -31,13 +31,26 @@ const Login = () => {
    e.preventDefault();
    signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      // ...
+      Swal.fire({
+        title: "ورود به حساب کاربری با موفقیت انجام شد",
+        icon: "success",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 3000,
+        toast: true,
+        position: "top",
+      });
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      Swal.fire({
+        title: "خطا در ورود رخ داد",
+        icon: "error",
+        showConfirmButton: false,
+        timerProgressBar: true,
+        timer: 3000,
+        toast: true,
+        position: "top",
+      });
     });
   }
 

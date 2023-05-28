@@ -4,6 +4,7 @@
 }
 form{
   text-align: center;
+  animation: slide-up 0.5s ease;
   input{
     display: block;
     font-weight: 300;
@@ -50,6 +51,7 @@ form{
   background-color:#ffc400;
 }
 .btn{
+  animation: slide-up 0.5s ease;
   background-color: #FF9800;
   padding: 5px 10px;
   border-radius: 12px;
@@ -62,5 +64,13 @@ form{
 @media screen and (max-width:700px){
   .cards{
     width: 60%;
+  }
+}
+@keyframes slide-up {
+  0% {
+     transform: translateY(-5rem);
+  }
+  100% {
+     transform: translateY(0) ;
   }
 }
