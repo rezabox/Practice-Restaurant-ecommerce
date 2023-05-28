@@ -1,36 +1,38 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initailState = {
-     isLoggedIn: false,
-     email: null,
-     userName: null,
-     userID:null
-}
+const initialState = {
+    isLoggedIn: false,
+    email: null,
+    useName:null,
+    userID:null
+};
+
 const authSlice = createSlice({
-     name: "auth",
-     initailState,
-     reducers: {
-         SET_ACTIVE_USER: (state,action) => {
-             console.log(action.payload);
-             const { email , userName , userID } = action.payload;
-             state.isLoggedIn = true;
-             state.email = email
-             state.userName = userName
-             state.userID = userID
-         },
-         SET_REMOVE_ACTIVE: (state,action) => {
-              console.log(action.payload);
-              state.isLoggedIn = false;
-              state.email = null
-              state.userName = null 
-              state.userID = null
-         }
-     }
+  name: "auth",
+  initialState,
+  reducers: {
+      SET_ACTIVE_USER: (state,action) => {
+        console.log(action.payload);
+        const { email , useName , userID} = action.payload;
+        state.isLoggedIn = true;
+        state.email = email
+        state.useName = useName
+        state.userID = userID
+      },
+      REMOVE_ACTIVE_USER: (state,action) => {
+        state.isLoggedIn = false;
+        state.email = null
+        state.useName = null
+        state.userID = null
+      }
+  },
 });
-export const  { SET_ACTIVE_USER,SET_REMOVE_ACTIVE } = authSlice.actions;
-export const SelectisLoggedIn = (state)=> state.auth.isLoggedIn;
-export const Selectemail = (state)=> state.auth.email;
-export const SelectuserName = (state)=> state.auth.userName;
-export const SelectuserID = (state)=> state.auth.userID;
+
+export const { SET_ACTIVE_USER , REMOVE_ACTIVE_USER } = authSlice.actions;
+
+export const selectIsLoggedIn = (state) => state.auth.isLoggedIn;
+export const selectEmail = (state) => state.auth.email;
+export const selectUserName = (state) => state.auth.userName;
+export const selectUserId = (state) => state.auth.userID;
 
 export default authSlice.reducer;

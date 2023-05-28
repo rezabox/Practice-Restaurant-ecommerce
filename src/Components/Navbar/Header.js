@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
 import "./Header.scss";
 import { auth } from "../../firebase/config";
 import { signOut } from "firebase/auth";
 import Swal from "sweetalert2";
+import { useDispatch, useSelector } from "react-redux";
+import ShowOnLogin, { ShowOnLogout } from "../hiddenLink/hiddenLink";
 
+import {
+  REMOVE_ACTIVE_USER,
+  SET_ACTIVE_USER,
+} from "../../redux/slice/authSlice";
+// import { AdminOnlyLink } from "../adminOnlyRoute/AdminOnlyRoute";
 function Header() {
   const [navbar, setNavbar] = useState(false);
   const [link, setLink] = useState(false);
@@ -111,6 +118,10 @@ function Header() {
               </button>
             </div>
             <div className="left_nav flex">
+              <Link to="/admin/home">
+                 <button className="bg-white ml-5 px-3 rounded-full">پنل آدمین</button>
+              </Link>
+              <ShowOnLogout>
               <li  className={link ? "link active" : "link active"}>
                 <NavLink to="/login">
                   <span>
@@ -119,6 +130,8 @@ function Header() {
                   ورود/ثبتنام
                 </NavLink>
               </li>
+              </ShowOnLogout>
+                <ShowOnLogin>
                     <li className={link ? "link active": "link active"}>
                       <NavLink to='/' >
                         <span className="bg-white px-2 rounded-full mr-5" onClick={logoutUser}>
@@ -126,6 +139,7 @@ function Header() {
                         </span>
                       </NavLink>
                     </li>
+                </ShowOnLogin>
                 </div>
           </div>
         </div>

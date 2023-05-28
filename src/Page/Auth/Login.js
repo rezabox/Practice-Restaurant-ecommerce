@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import icon1 from "../assets/eye-fill.svg";
 import icon2 from "../assets/eye-slash-fill.svg";
 import { FaGoogle } from "react-icons/fa";
@@ -18,6 +18,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [change, setChange] = useState("password");
   const [icon, setIcon] = useState(icon2);
+  const navigate = useNavigate();
   const handleClick = () => {
     if (change === "password") {
       setChange("text");
@@ -40,6 +41,7 @@ const Login = () => {
         toast: true,
         position: "top",
       });
+      navigate('/');
     })
     .catch((error) => {
       Swal.fire({
@@ -67,6 +69,7 @@ const Login = () => {
           toast: true,
           position: "top",
         });
+        navigate('/');
       })
       .catch((error) => {
         Swal.fire({
@@ -94,6 +97,7 @@ const Login = () => {
         toast: true,
         position: "top",
       });
+      navigate('/');
      })
      .catch((error)=>{
       Swal.fire({
