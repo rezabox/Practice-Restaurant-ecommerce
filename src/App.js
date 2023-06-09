@@ -6,6 +6,8 @@ import Login from './Page/Auth/Login';
 import Connect from './Page/connect/Connect';
 import Register from './Page/Auth/Register';
 import Reset from './Page/Auth/Reset';
+import AdminOnlyRoute from './Components/adminOnlyRoute/AdminOnlyRoute';
+import Admin from './Page/admin/Admin';
 
 
 function App() {
@@ -19,7 +21,12 @@ function App() {
          <Route path='/register' element={<Register/>}></Route>
          <Route path='/connect' element={<Connect/>}></Route>
          <Route path='/reset' element={<Reset/>}></Route>
+         <Route path='/admin/*' element={
+             <Admin/> 
+         }
+         />
       </Routes>
+      {/* <br/> */}
       <FooterPage/>
      </BrowserRouter>
    </>
