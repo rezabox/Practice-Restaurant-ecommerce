@@ -1,0 +1,38 @@
+.container{
+ background-color: gainsboro; 
+}
+.section{
+   padding: 15px;
+}
+input{
+   border:1px solid grey;
+   border-radius: 12px;
+   outline: none;
+   margin-top: 5px;
+   padding: 1px 5px;
+}
+card{ 
+ width: 25%;
+ padding: 10px;
+ margin: auto;
+ background-color: #ffc400;
+ line-height: 30px;
+ display: grid;
+ align-items: center;
+ justify-content: center;
+ border-radius: 12px;
+}
+.sendbtn{
+    color:#fff ;
+    background-color: #ff7300bd;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+@media screen and (max-width:600px){
+   card{
+      width:80%;
+   }
+   input{
+      position: relative;
+   }
+}
