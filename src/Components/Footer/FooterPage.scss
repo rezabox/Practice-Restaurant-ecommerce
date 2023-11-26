@@ -1,0 +1,61 @@
+.location{
+  width: 150%;
+  padding: 70px;
+  border-radius: 13px;
+}
+.bg_footer{
+  width: 100%;
+  position: absolute;
+  background-image: url('../../image/bg_price.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before{
+    content: "";
+    background-image: url('../../image/line.png');
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 96px;
+    top: -45px;
+    z-index: 1;
+  }
+}
+.row3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_address{
+  padding: 30px;
+  .link_footer{
+    margin-left: 50px;
+    display: flex;
+    color: #fff;
+    .leafBL{
+       width: 100px;
+    }
+    .bi-geo-alt{
+      color:#1081e0;
+    }
+    .bi-telephone-fill{
+      color:#fb6363;
+    }
+    .bi-calendar-week{
+      color:#ffa210;
+    }
+  }
+}
+@media screen and (max-width:600px){
+  .row3{
+    display: block;
+  }
+  .location{
+    width: 100%;
+    padding: 50px;
+  }
+  .link_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

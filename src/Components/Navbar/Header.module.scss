@@ -1,0 +1,20 @@
+.navbar{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:5px 10px;
+  li{
+    list-style: none;
+    transition: .5s color ease-in-out;
+    :hover{
+      color: orange;
+    }
+    
+  }
+}
+.active{
+    position: relative;
+    color: orange;
+}
+
